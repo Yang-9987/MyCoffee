@@ -1,0 +1,26 @@
+PODS:
+  - Introspect (0.1.4)
+  - ProgressHUD (13.6)
+  - SQLite.swift (0.13.3):
+    - SQLite.swift/standard (= 0.13.3)
+  - SQLite.swift/standard (0.13.3)
+
+DEPENDENCIES:
+  - Introspect
+  - ProgressHUD
+  - SQLite.swift (~> 0.13.3)
+
+SPEC REPOS:
+  trunk:
+    - Introspect
+    - ProgressHUD
+    - SQLite.swift
+
+SPEC CHECKSUMS:
+  Introspect: b62c4dd2063072327c21d618ef2bedc3c87bc366
+  ProgressHUD: 4bdaa0d2ddf676b23324b199f9facffb5c3a1620
+  SQLite.swift: 903bfa3bc9ab06345fdfbb578e34f47cfcf417da
+
+PODFILE CHECKSUM: 70ca32f0fe40e99dc913ea19b0365cc16a29d3ce
+
+COCOAPODS: 1.11.3

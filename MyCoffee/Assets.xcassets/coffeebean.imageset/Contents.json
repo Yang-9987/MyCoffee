@@ -1,0 +1,23 @@
+{
+  "images" : [
+    {
+      "filename" : "noun-coffee-beans-3345092.png",
+      "idiom" : "universal",
+      "scale" : "1x"
+    },
+    {
+      "filename" : "noun-coffee-beans-3345093.png",
+      "idiom" : "universal",
+      "scale" : "2x"
+    },
+    {
+      "filename" : "noun-coffee-beans-3345094.png",
+      "idiom" : "universal",
+      "scale" : "3x"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
