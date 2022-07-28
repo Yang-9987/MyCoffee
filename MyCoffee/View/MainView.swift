@@ -42,10 +42,6 @@ struct MainView: View {
                     .frame(maxWidth: .infinity, maxHeight: .infinity)
             case .settings:
                 Settings()
-                    .introspectNavigationController { navigationController in
-                        navigationController.clearBackgroundColor()
-                    }
-                    .frame(maxWidth: .infinity, maxHeight: .infinity)
             }
                 
             BottomBar(selectedTab: $selectedTab)
@@ -73,7 +69,7 @@ struct MainView: View {
                 case .home :
                     backgroundGradient.ignoresSafeArea(.all)
                 case .bean:
-                    Color.gray
+                    Color.white
                 case .tasting:
                     Color.green
                 case .settings:

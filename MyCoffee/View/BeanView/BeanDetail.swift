@@ -1,32 +1,21 @@
 //
-//  Settings.swift
+//  BeanDetail.swift
 //  MyCoffee
 //
-//  Created by Yang Jianqi on 2022/7/8.
+//  Created by Yang Jianqi on 2022/7/25.
 //
 
 import SwiftUI
-import CoreLocation
 
-struct Settings: View {
+struct BeanDetail: View {
     @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var set: setData
+    @Binding var bean: Bean
     
     var body: some View {
-        VStack {
-            List {
-                ForEach(1..<8) { index in
-                    HStack {
-                        Image("photo-\(index)")
-                            .resizable()
-                            .scaledToFill()
-                            .frame(width: 100, height: 50)
-                            .cornerRadius(10)
-             
-                        Text("Photo #\(index)")
-                            .bold()
-                    }
-                }
+        ScrollView(.vertical, showsIndicators: false, content: {
+            VStack {
+                Text("hahaha")
             }
             .navigationBarBackButtonHidden()
             .navigationBarItems(leading: Button(action: {
@@ -39,13 +28,19 @@ struct Settings: View {
                         }
                     })
             )
-        }
+            .onAppear {
+                set.tabBarShow = false
+            }
+            .onDisappear {
+                set.tabBarShow = true
+            }
+        })
     }
 }
 
-struct Settings_Previews: PreviewProvider {
+struct BeanDetail_Previews: PreviewProvider {
     static var previews: some View {
-        Settings()
+        BeanDetail(bean: .constant(beans[0]))
             .environmentObject(setData())
     }
 }

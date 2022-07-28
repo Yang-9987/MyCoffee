@@ -28,6 +28,8 @@
 		D65A36C828509FB200AE2658 /* PassKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D65A36C728509FB200AE2658 /* PassKit.framework */; };
 		D65A36CA28509FF100AE2658 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D65A36C928509FF100AE2658 /* HealthKit.framework */; };
 		D66EC6702883DF3E002FC9FD /* HomeTodayCardItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D66EC66F2883DF3E002FC9FD /* HomeTodayCardItemView.swift */; };
+		D67A405928925FDA009908C7 /* tabItems&favoriteItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67A405828925FDA009908C7 /* tabItems&favoriteItem.swift */; };
+		D67A405C28926278009908C7 /* BeanListItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D67A405B28926278009908C7 /* BeanListItemView.swift */; };
 		D6808AD02850AA1C00BF2935 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D6808ACF2850AA1C00BF2935 /* LaunchScreen.storyboard */; };
 		D6A1C0E0288E8BD600DF5E4C /* BeanDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1C0DF288E8BD600DF5E4C /* BeanDetail.swift */; };
 		D6A1C0E2288E8C4500DF5E4C /* TasteDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6A1C0E1288E8C4500DF5E4C /* TasteDetail.swift */; };
@@ -92,6 +94,8 @@
 		D65A36C728509FB200AE2658 /* PassKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = PassKit.framework; path = System/Library/Frameworks/PassKit.framework; sourceTree = SDKROOT; };
 		D65A36C928509FF100AE2658 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
 		D66EC66F2883DF3E002FC9FD /* HomeTodayCardItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTodayCardItemView.swift; sourceTree = "<group>"; };
+		D67A405828925FDA009908C7 /* tabItems&favoriteItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "tabItems&favoriteItem.swift"; sourceTree = "<group>"; };
+		D67A405B28926278009908C7 /* BeanListItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeanListItemView.swift; sourceTree = "<group>"; };
 		D6808ACF2850AA1C00BF2935 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D6A1C0DF288E8BD600DF5E4C /* BeanDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeanDetail.swift; sourceTree = "<group>"; };
 		D6A1C0E1288E8C4500DF5E4C /* TasteDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TasteDetail.swift; sourceTree = "<group>"; };
@@ -221,10 +225,9 @@
 				D654F07B287FB0B00083913E /* HomeView */,
 				D6FD48B9287D22B000E97864 /* plugin */,
 				D6FD48B02878652F00E97864 /* other */,
-				D6FD48B32878656300E97864 /* BeanView.swift */,
+				D67A405A2892624E009908C7 /* BeanView */,
 				D6FD48B52878656F00E97864 /* TastingView.swift */,
 				D6FD48B12878655300E97864 /* Settings.swift */,
-				D6A1C0DF288E8BD600DF5E4C /* BeanDetail.swift */,
 				D6A1C0E1288E8C4500DF5E4C /* TasteDetail.swift */,
 			);
 			path = View;
@@ -238,6 +241,7 @@
 				D6FD48B7287BFD8500E97864 /* TodayReview.swift */,
 				D6BDB1A1288D81EE00BA3507 /* CupCoffee.swift */,
 				D65A36BA28508F0B00AE2658 /* Enum */,
+				D67A405828925FDA009908C7 /* tabItems&favoriteItem.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -291,6 +295,16 @@
 				D23E0677F50B6D689512DE21 /* Pods_MyCoffee.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D67A405A2892624E009908C7 /* BeanView */ = {
+			isa = PBXGroup;
+			children = (
+				D6FD48B32878656300E97864 /* BeanView.swift */,
+				D6A1C0DF288E8BD600DF5E4C /* BeanDetail.swift */,
+				D67A405B28926278009908C7 /* BeanListItemView.swift */,
+			);
+			path = BeanView;
 			sourceTree = "<group>";
 		};
 		D6F3DA2E288503B000672652 /* Sqlite */ = {
@@ -458,8 +472,10 @@
 				D6F3DA30288503DA00672652 /* initSqlite.swift in Sources */,
 				D6222F79288719F100A7F6DC /* GlobalVariable.swift in Sources */,
 				D6FD48B62878656F00E97864 /* TastingView.swift in Sources */,
+				D67A405C28926278009908C7 /* BeanListItemView.swift in Sources */,
 				D6222F87288D770300A7F6DC /* MoodView.swift in Sources */,
 				D6FD48BD287D250D00E97864 /* LogoView.swift in Sources */,
+				D67A405928925FDA009908C7 /* tabItems&favoriteItem.swift in Sources */,
 				D6222F752887190E00A7F6DC /* getLocation.swift in Sources */,
 				D66EC6702883DF3E002FC9FD /* HomeTodayCardItemView.swift in Sources */,
 				D65A36BC285090CD00AE2658 /* acidity_body.swift in Sources */,

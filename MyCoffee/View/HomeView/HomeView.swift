@@ -19,7 +19,7 @@ struct HomeView: View {
     @State private var showNewtaskItem: Bool = false
     @State var todayReview: TodayReview = todayReviews.last!
     
-    @State var beans: [MyFavoriteItem] = myFavoriteItems.filter { $0.type == .Bean }.sorted { $0.date > $1.date }
+    @State var beansF: [MyFavoriteItem] = myFavoriteItems.filter { $0.type == .Bean }.sorted { $0.date > $1.date }
     @State var tastes: [MyFavoriteItem] = myFavoriteItems.filter { $0.type == .Taste }.sorted { $0.date > $1.date }
     
     @State private var offsets = [CGSize](repeating: CGSize.zero, count: 6)
@@ -28,7 +28,7 @@ struct HomeView: View {
     
     // MARK:  Body
     var body: some View {
-        NavigationView {
+        NavigationStack {
             ScrollView(.vertical, showsIndicators: false, content: {
                 VStack(alignment: .leading, spacing: 10) {
                     Spacer()
@@ -61,11 +61,9 @@ struct HomeView: View {
                             Text("Bean")
                                 .foregroundColor(Color("heavyGreen"))
                                 .font(.system(size: 30, weight: .medium, design: .serif))
-                            ForEach(beans) { myFavoriteItem in
-                                NavigationLink(destination: BeanDetail()){
-                                    MyFavoriteView(myFavoriteData: myFavoriteItem)
-                                        .foregroundColor(Color.white)
-                                }
+                            ForEach(beansF) { myFavoriteItem in
+                                MyFavoriteView(myFavoriteData: myFavoriteItem)
+                                    .foregroundColor(Color.white)
                             }
                         }
                         .padding(.leading, 10)
@@ -76,10 +74,8 @@ struct HomeView: View {
                                 .foregroundColor(Color("heavyGreen"))
                                 .font(.system(size: 30, weight: .medium, design: .serif))
                             ForEach(tastes) { myFavoriteItem in
-                                NavigationLink(destination: TasteDetail()){
-                                    MyFavoriteView(myFavoriteData: myFavoriteItem)
-                                        .foregroundColor(Color.white)
-                                }
+                                MyFavoriteView(myFavoriteData: myFavoriteItem)
+                                    .foregroundColor(Color.white)
                             }
                         }
                         .padding(.top, 5)
@@ -115,9 +111,6 @@ struct HomeView: View {
                     Spacer()
                 }
             })
-            .onAppear {
-                set.HeaderColor = Color("backgroundColor")
-            }
         }
         .accentColor(Color("mybrown"))
     }

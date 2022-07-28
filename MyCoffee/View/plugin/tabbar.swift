@@ -44,7 +44,7 @@ struct BottomBar: View {
                 Spacer()
             }
         }
-        .frame(height: 80, alignment: .top)
+        .frame(height: 90, alignment: .top)
         .padding(.horizontal, 2)
         .padding(.top, 15)
         .background(Material.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 8))
