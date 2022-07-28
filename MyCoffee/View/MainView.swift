@@ -50,7 +50,7 @@ struct MainView: View {
                 
             BottomBar(selectedTab: $selectedTab)
                 .offset(y:set.tabBarShow ? 0 : 80)
-                .animation(.easeIn(duration: 0.3), value: set.tabBarShow)
+                .animation(.easeInOut(duration: 0.3), value: set.tabBarShow)
             
             HeaderView()
                 .introspectViewController { viewController in
@@ -60,7 +60,7 @@ struct MainView: View {
                 .background(Material.ultraThinMaterial)
                 .padding(.bottom, UIScreen.main.bounds.size.height - 80)
                 .offset(y:set.tabBarShow ? 0 : -90)
-                .animation(.easeIn(duration: 0.3), value: set.tabBarShow)
+                .animation(.easeInOut(duration: 0.3), value: set.tabBarShow)
         }
         .onAppear {
             set.menuLevel = 0

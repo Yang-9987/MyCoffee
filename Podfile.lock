@@ -1,26 +1,49 @@
 PODS:
+  - AnyImageKit (0.14.6):
+    - AnyImageKit/Capture (= 0.14.6)
+    - AnyImageKit/Core (= 0.14.6)
+    - AnyImageKit/Editor (= 0.14.6)
+    - AnyImageKit/Picker (= 0.14.6)
+  - AnyImageKit/Capture (0.14.6):
+    - AnyImageKit/Core
+  - AnyImageKit/Core (0.14.6):
+    - Kingfisher
+    - SnapKit
+  - AnyImageKit/Editor (0.14.6):
+    - AnyImageKit/Core
+  - AnyImageKit/Picker (0.14.6):
+    - AnyImageKit/Core
   - Introspect (0.1.4)
+  - Kingfisher (7.3.0)
   - ProgressHUD (13.6)
+  - SnapKit (5.6.0)
   - SQLite.swift (0.13.3):
     - SQLite.swift/standard (= 0.13.3)
   - SQLite.swift/standard (0.13.3)
 
 DEPENDENCIES:
+  - AnyImageKit
   - Introspect
   - ProgressHUD
   - SQLite.swift (~> 0.13.3)
 
 SPEC REPOS:
   trunk:
+    - AnyImageKit
     - Introspect
+    - Kingfisher
     - ProgressHUD
+    - SnapKit
     - SQLite.swift
 
 SPEC CHECKSUMS:
+  AnyImageKit: 3629639a49027e4cb861f48c60aa77fa6a529478
   Introspect: b62c4dd2063072327c21d618ef2bedc3c87bc366
+  Kingfisher: cdb1189a9223b1bc028816bd47c8b8101a58831c
   ProgressHUD: 4bdaa0d2ddf676b23324b199f9facffb5c3a1620
+  SnapKit: e01d52ebb8ddbc333eefe2132acf85c8227d9c25
   SQLite.swift: 903bfa3bc9ab06345fdfbb578e34f47cfcf417da
 
-PODFILE CHECKSUM: 70ca32f0fe40e99dc913ea19b0365cc16a29d3ce
+PODFILE CHECKSUM: 25cbd8cb438250b531230bac62bbda1f0a3d76e9
 
 COCOAPODS: 1.11.3
