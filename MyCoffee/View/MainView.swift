@@ -73,11 +73,11 @@ struct MainView: View {
                 case .home :
                     backgroundGradient.ignoresSafeArea(.all)
                 case .bean:
-                    Color.white
+                    Color.gray
                 case .tasting:
-                    Color.white
+                    Color.green
                 case .settings:
-                    Color.white
+                    Color.brown
                 }
             } else {
                 

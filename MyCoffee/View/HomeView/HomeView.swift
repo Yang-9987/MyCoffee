@@ -64,7 +64,7 @@ struct HomeView: View {
                             ForEach(beans) { myFavoriteItem in
                                 NavigationLink(destination: BeanDetail()){
                                     MyFavoriteView(myFavoriteData: myFavoriteItem)
-                                        .foregroundColor(Color.black)
+                                        .foregroundColor(Color.white)
                                 }
                             }
                         }
@@ -78,7 +78,7 @@ struct HomeView: View {
                             ForEach(tastes) { myFavoriteItem in
                                 NavigationLink(destination: TasteDetail()){
                                     MyFavoriteView(myFavoriteData: myFavoriteItem)
-                                        .foregroundColor(Color.black)
+                                        .foregroundColor(Color.white)
                                 }
                             }
                         }
@@ -101,7 +101,7 @@ struct HomeView: View {
                         ForEach(cupCoffees.sorted { $0.score > $1.score}) { cupCoffee in
                             NavigationLink(destination: CupCoffeeDetailView(data: cupCoffee)){
                                 CupsListItemView(data: cupCoffee)
-                                    .foregroundColor(Color.black)
+                                    .foregroundColor(Color.white)
                             }
                         }
                     }

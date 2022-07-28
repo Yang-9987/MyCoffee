@@ -8,12 +8,24 @@
 import SwiftUI
 
 struct TasteDetail: View {
+    @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var set: setData
     
     var body: some View {
         VStack {
             Text("123")
         }
+        .navigationBarBackButtonHidden()
+        .navigationBarItems(leading: Button(action: {
+                    self.presentationMode.wrappedValue.dismiss()
+                }, label: {
+                    HStack {
+                        Image(systemName: "arrow.left")
+                        Text("Taste")
+                            .foregroundColor(.black)
+                    }
+                })
+        )
         .onAppear {
             set.tabBarShow = false
         }

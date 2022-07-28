@@ -11,6 +11,7 @@ import WeatherKit
 
 @available(iOS 16.0, *)
 struct BeanView: View {
+    
     @EnvironmentObject var set: setData
     
     var body: some View {

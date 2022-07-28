@@ -9,11 +9,12 @@ import SwiftUI
 import Introspect
 
 struct CupCoffeeDetailView: View {
+    @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var set: setData
     var data: CupCoffee
     
     var body: some View {
-        NavigationView {
+        VStack {
             ScrollView(.vertical, showsIndicators: false, content: {
                 VStack(alignment: .leading, spacing: 10) {
                     HStack {
@@ -25,6 +26,17 @@ struct CupCoffeeDetailView: View {
                 .padding()
             })
         }
+        .navigationBarBackButtonHidden()
+        .navigationBarItems(leading: Button(action: {
+                    self.presentationMode.wrappedValue.dismiss()
+                }, label: {
+                    HStack {
+                        Image(systemName: "arrow.left")
+                        Text("Cups")
+                            .foregroundColor(.black)
+                    }
+                })
+        )
         .onDisappear {
             set.tabBarShow = true
         }

@@ -145,13 +145,16 @@ struct HomeTodayCardItemsView: View {
     func cardBeanStorage(weight: Double) -> some View {
         let weight = String(format: "%.2f", weight)
         VStack {
-            Text("BeanStorage")
-                .font(.system(size: 25, weight: .bold, design: .serif))
+            VStack {
+                Text("Bean")
+                Text("Storage")
+            }
+            .font(.system(size: 25, weight: .bold, design: .serif))
             Text("\(weight) g")
                 .frame(height: UIScreen.main.bounds.height / 10, alignment: .center)
         }
         .foregroundColor(.white)
-        .frame(width: UIScreen.main.bounds.width / 2, height: UIScreen.main.bounds.height / 5, alignment: .center)
+        .frame(width: UIScreen.main.bounds.width / 2.5, height: UIScreen.main.bounds.height / 5, alignment: .center)
         .background(Color(hex: "#b8e994"))
         .cornerRadius(15)
         .padding(.trailing, 10)
